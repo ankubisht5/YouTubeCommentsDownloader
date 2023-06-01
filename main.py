@@ -15,7 +15,7 @@ def extract_video_id(link):
 
 def main():
     # Set up the YouTube Data API
-    api_key = ""  # Replace with your own YouTube Data API key
+    api_key = "YOUR_API"  # Replace with your own YouTube Data API key
     youtube = build('youtube', 'v3', developerKey=api_key)
 
     # Specify the video link

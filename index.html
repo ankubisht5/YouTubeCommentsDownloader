@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download YouTube Comments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .input-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .input-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Download YouTube Comments</h2>
+        <form action="/download_comments" method="POST">
+            <div class="input-group">
+                <label for="youtube-link">Enter YouTube Link:</label>
+                <input type="text" id="youtube-link" name="youtube_link" placeholder="https://www.youtube.com/watch?v=...">
+            </div>
+            <div class="input-group">
+                <button type="submit">Download Comments</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
