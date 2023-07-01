@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Comment Downloader - Extract and Download YouTube Comments</title>
+    <meta name="description" content="Extract and download comments from YouTube videos with the YouTube Comment Downloader. Analyze, filter, and export comments for YouTube SEO and analytics.">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>YouTube Comment Downloader - Extract and Download YouTube Comments</h1>
+    </header>
+
+    <div class="container">
+        <form id="downloadForm" method="POST">
+            <label for="youtubeUrl">Enter YouTube URL:</label>
+            <input type="text" id="youtubeUrl" name="youtube_url" placeholder="Enter YouTube URL" required>
+            <label for="keywordFilter">Enter keyword to filter (optional):</label>
+            <input type="text" id="keywordFilter" name="keyword_filter" placeholder="Enter keyword to filter">
+            <label for="numComments">Number of Comments to download:(optional)</label>
+            <input type="text" id="numComments" name="num_comments" placeholder="Enter number of comments to download" pattern="[0-9]+" title="Please enter a valid number">
+            <label for="sortComments">Sort Comments:</label>
+            <select id="sortComments" name="sort_comments">
+                <option value="relevance">Relevance</option>
+                <option value="date">Date</option>
+            </select>
+            <label for="commentFormat">Comment Format:</label>
+            <select id="commentFormat" name="comment_format">
+                <option value="text">Plain Text</option>
+                <option value="json">JSON</option>
+                <option value="csv">CSV</option>
+            </select>
+            <label for="removeDuplicates">
+                <input type="checkbox" id="removeDuplicates" name="remove_duplicates">
+                Remove Duplicate Comments
+            </label>
+            <button type="submit">Download Comments</button>
+        </form>
+        <div id="downloadLink" class="hidden">
+            <!-- Your download link code here -->
+        </div>
+
+        <section id="donateSection">
+            <h2>Support This Project</h2>
+            <p>If you find this project useful, you can show your appreciation by donating cryptocurrencies:</p>
+            <div id="cryptoAddresses">
+                <div class="cryptoAddress">
+                    <h3>Ethereum (ETH)</h3>
+                    <p>0x1234567890ABCDEF</p>
+                </div>
+                <div class="cryptoAddress">
+                    <h3>TRON (TRX)</h3>
+                    <p>TW1234567890</p>
+                </div>
+                <div class="cryptoAddress">
+                    <h3>Bitcoin (BTC)</h3>
+                    <p>1AbCdEfGhIjKlMnOpQrStUvWxYz</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2023 Your Website - All rights reserved - YouTube Comment Downloader</p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
