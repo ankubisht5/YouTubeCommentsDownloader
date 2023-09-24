@@ -1,0 +1,66 @@
+{% block head %}
+<head>
+    <title>YouTube Comment Downloader - Extract and Download YouTube Comments</title>
+    <meta name="description" content="Extract and download comments from YouTube videos with the YouTube Comment Downloader. Analyze, filter, and export comments for YouTube SEO and analytics.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+{% endblock %}
+
+{% block body %}
+<div class="body">
+    <header>
+        <h1>YouTube Comment Downloader - Extract and Download YouTube Comments</h1>
+    </header>
+<div class="container">
+    <form id="downloadForm" method="POST" action="/download">
+        <label for="youtubeUrl">Enter YouTube URL:</label>
+        <input type="text" id="youtubeUrl" name="youtube_url" placeholder="Enter YouTube URL" required>
+        <label for="keywordFilter">Enter keyword to filter (optional):</label>
+        <input type="text" id="keywordFilter" name="keyword_filter" placeholder="Enter keyword to filter">
+        <label for="numComments">Number of Comments to download:(optional)</label>
+        <input type="text" id="numComments" name="num_comments" placeholder="Enter number of comments to download" pattern="[0-9]+" title="Please enter a valid number">
+        <label for="sortComments">Sort Comments:</label>
+        <select id="sortComments" name="sort_comments">
+            <option value="like">Like</option>
+            <option value="date">Date</option>
+        </select>
+        <label for="commentFormat">Comment Format:</label>
+        <select id="commentFormat" name="comment_format">
+            <option value="json">JSON</option>
+            <option value="csv">CSV</option>
+        </select>
+        <label for="removeDuplicates">
+            <input type="checkbox" id="removeDuplicates" name="remove_duplicates">
+            Remove Duplicate Comments
+        </label>
+        <button type="submit">Download Comments</button>
+    </form>
+    <section id="donateSection">
+        <h2>Support This Project</h2>
+        <p>If you find this project useful, you can show your appreciation by donating cryptocurrencies:</p>
+        <div id="cryptoAddresses">
+            <div class="cryptoAddress">
+                <h3>Ethereum (ETH)</h3>
+                <p>0x480d2E54D33e2e400D5bf5774139160091AeeCCc</p>
+            </div>
+            <div class="cryptoAddress">
+                <h3>TRON (TRX)</h3>
+                <p>TBgQTDcErQhA9WuDjwSZbDsQ9cjjhpm78f</p>
+            </div>
+            <div class="cryptoAddress">
+                <h3>Bitcoin (BTC)</h3>
+                <p>1JSExCyHcNLZr5X9o8wVv5W6fNUKfnHLKK</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+    <footer>
+        <p>© 2023 Your Website - All rights reserved - YouTube Comment Downloader</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</div>
+{% endblock %}
+
